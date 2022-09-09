@@ -6,4 +6,7 @@ services:
             context: ./php-build
         restart: 'no'
         volumes:
-            - '../..:/var/www/app'
+            - '../..:/app'
+        environment:
+            XDEBUG_MODE: 'coverage'
+        working_dir: '/app'

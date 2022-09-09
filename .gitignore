@@ -5,3 +5,5 @@
 .phpunit.result.cache
 /local
 /coverage
+clover.xml
+.coveralls.yml
