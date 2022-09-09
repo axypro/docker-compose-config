@@ -25,6 +25,16 @@
         }
     },
     "archive": {
-        "exclude": ["/tests/*", "/doc/*", "/cs.sh", "/phpmd.sh", "/*.xml.dist", "/CHANGELOG.md"]
+        "exclude": [
+            "/tests/*",
+            "/.github/*",
+            "/doc/*",
+            "/*.sh",
+            "/*.xml.dist",
+            "/CHANGELOG.md"
+        ]
+    },
+    "scripts": {
+        "test": "phpunit -c phpunit.xml.dist"
     }
 }
