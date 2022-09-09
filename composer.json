@@ -35,6 +35,6 @@
         ]
     },
     "scripts": {
-        "test": "phpunit -c phpunit.xml.dist"
+        "test": "phpunit -c phpunit.xml.dist --coverage-clover coverage/clover.xml"
     }
 }
