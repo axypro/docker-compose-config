@@ -10,4 +10,8 @@
  * @uses PHP8+
  */
 
+declare(strict_types=1);
+
+namespace axy\docker\compose\config;
+
 require_once __DIR__ . '/vendor/autoload.php';
