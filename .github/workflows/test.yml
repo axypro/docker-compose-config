@@ -1,4 +1,4 @@
-name: PHP Tests
+name: Tests
 
 on: push
 
@@ -25,10 +25,18 @@ jobs:
             - name: Install Composer dependencies
               run: composer install
 
-            - name: Run Composer tests
-              #if: ${{ matrix.php != '8.1' }}
+            - name: Run tests
+              if: ${{ matrix.php != '8.2' }}
               run: vendor/bin/phpunit -c phpunit.xml.dist
 
-            #- name: Run Composer tests with coverage
-              #if: ${{ matrix.php == '8.1' }}
-              #run: sh coveralls.sh
+ 	        - name: Run tests with coverage
+              if: ${{ matrix.php == '8.2' }}
+              run: vendor/bin/phpunit --coverage-clover local/clover.xml
+
+	        - name: Upload coverage results to Coveralls
+              if: ${{ matrix.php == '8.2' }}
+              env:
+                COVERALLS_REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+              run: |
+                composer global require php-coveralls/php-coveralls
+                php-coveralls --coverage_clover=local/clover.xml -v --json_path=local/clover.json
