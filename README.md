@@ -3,6 +3,7 @@
 [![Latest Stable Version](https://img.shields.io/packagist/v/axy/docker-compose-config.svg?style=flat-square)](https://packagist.org/packages/axy/docker-compose-config)
 [![Minimum PHP Version](https://img.shields.io/badge/php-%3E%3D%208.0-8892BF.svg?style=flat-square)](https://php.net/)
 [![Tests](https://github.com/axypro/docker-compose-config/actions/workflows/test.yml/badge.svg)](https://github.com/axypro/docker-compose-config/actions/workflows/test.yml)
+[![Coverage Status](https://coveralls.io/repos/github/axypro/docker-compose-config/badge.svg?branch=master)](https://coveralls.io/github/axypro/docker-compose-config?branch=master)
 [![License](https://poser.pugx.org/axy/docker-compose-config/license)](LICENSE)
 
 Work with [docker-compose config](https://docs.docker.com/compose/compose-file/).
